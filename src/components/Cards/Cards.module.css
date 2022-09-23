@@ -1,0 +1,9 @@
+.cardContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: 'wrap';
+    width: 80%;
+    height: 800px;
+    margin: 10%;
+    align-items: center;
+}

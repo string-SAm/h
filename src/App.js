@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+// eslint-disable-next-line no-unused-vars
+import React from "react";
+import "./App.css";
+import Home from "./components/Home.js";
+import Inventory from "./pages/inventory/Inventory";
+import Transportation from "./pages/transportation/Transportation";
+import Warehouse from "./pages/warehouse/Warehouse";
+import Error from "./pages/Error";
+import { Route, Routes } from "react-router-dom";
+//import H from "./components/H.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} exact />
+      <Route path="/Inventory" element={<Inventory />} />
+      <Route path="/Transportation" element={<Transportation />} />
+      <Route path="/Warehouse" element={<Warehouse />} />
+      <Route path="*" element={<Error />} />
+    </Routes>
   );
 }
 

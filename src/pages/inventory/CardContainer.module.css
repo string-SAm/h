@@ -1,0 +1,7 @@
+.CardContainer{
+background-color: blue;
+display: flex;
+flex-wrap: wrap;
+padding: 5% 10%;
+align-items: center;
+}
